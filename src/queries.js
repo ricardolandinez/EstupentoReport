@@ -1,12 +1,12 @@
 
 
 
-const query = [{
+const query = (gte, lt) => [{
     $match: {
         estado: 2,
         created_at: {
-            $gte: new Date("2023-09-01T00:00:00Z"),
-            $lt: new Date("2023-09-30T23:59:59Z")
+            $gte: gte,
+            $lt: lt
         }
     }
 },
@@ -44,7 +44,7 @@ const query = [{
     }
 }]
 
-const eventos = [{
+const eventos = (gte, lt) =>  [{
     $match: {
         "radian.evento_pre_radian": true
     }
@@ -65,10 +65,10 @@ const eventos = [{
                         $and: [
                             { $eq: ["$emisor_id", "$$cliente_id"] },
                             {
-                                $gte: ["$created_at", new Date("2023-09-01T00:00:00Z")]
+                                $gte: ["$created_at", gte]
                             },
                             {
-                                $lt: ["$created_at", new Date("2023-09-30T23:59:59Z")]
+                                $lt: ["$created_at", lt]
                             }
                         ]
                     }
@@ -92,13 +92,13 @@ const eventos = [{
 { $sort: { totalDocumentos_eventos: -1 } },
 ]
 
-const nomina = [
+const nomina = (gte, lt) =>  [
     {
         $match: {
             estado: 2,
             created_at: {
-                $gte: new Date("2023-09-01T00:00:00Z"),
-                $lt: new Date("2023-09-30T23:59:59Z")
+                $gte: gte,
+                $lt: lt
             }
         }
     },
@@ -135,12 +135,12 @@ const nomina = [
     }
 ]
 
-const recepcion = [
+const recepcion = (gte, lt) =>  [
     {
         $match: {
             created_at: {
-                $gte: new Date("2023-09-01T00:00:00Z"),
-                $lt: new Date("2023-09-30T23:59:59Z")
+                $gte: gte,
+                $lt: lt
             }
         }
     },
@@ -178,13 +178,13 @@ const recepcion = [
     }
 ]
 
-const rechazados = [
+const rechazados = (gte, lt) => [
     {
         $match: {
             estado: 3,
             created_at: {
-                $gte: new Date("2023-09-01T00:00:00Z"),
-                $lt: new Date("2023-09-30T23:59:59Z")
+                $gte: gte,
+                $lt: lt
             }
         }
     },

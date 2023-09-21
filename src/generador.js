@@ -10,9 +10,8 @@ const generarReporte = (query, collection) => {
             .then(resolve)
             .catch(reject)
             .finally(() => closeConnection(client))
-    
     })
 
 }
 
-export default generarReporte;
+export {generarReporte};
