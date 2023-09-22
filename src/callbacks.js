@@ -1,7 +1,8 @@
 import ExcelJS from "exceljs";
 
 // autorizados
-const generarAutorizados = (data) => {
+const generarAutorizados = (data) => new Promise((resolve, reject) => {
+
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Reporte');
 
@@ -16,16 +17,12 @@ const generarAutorizados = (data) => {
 
     const filename = 'files/Reporte_documentos_autorizados_emision.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => {
-            console.log(`Reporte generado exitosamente en ${filename}`);
-        })
-        .catch(error => {
-            console.error('Error al generar el reporte:', error);
-        });
+        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .catch(error => reject('Error al generar el reporte:', error));
+})
 
-}
 // eventos
-const generarEventos = (data) => {
+const generarEventos = (data) => new Promise((resolve, reject) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Reporte');
 
@@ -44,16 +41,12 @@ const generarEventos = (data) => {
 
     const filename = 'files/Reporte_eventos.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => {
-            console.log(`Reporte generado exitosamente en ${filename}`);
-        })
-        .catch(error => {
-            console.error('Error al generar el reporte:', error);
-        });
-}
+        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .catch(error => reject('Error al generar el reporte:', error));
+})
 
 // nomina
-const generarNomina = (data) => {
+const generarNomina = (data) => new Promise((resolve, reject) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Reporte');
 
@@ -71,17 +64,16 @@ const generarNomina = (data) => {
 
     const filename = 'files/Reporte_documentos_autorizados_nomina.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => {
-            console.log(`Reporte generado exitosamente en ${filename}`);
-        })
-        .catch(error => {
-            console.error('Error al generar el reporte:', error);
-        });
+        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .catch(error => reject('Error al generar el reporte:', error));
+})
 
-}
+
+
 
 // recepcion
-const generarRecepcion = (data) => {
+const generarRecepcion = (data) => new Promise ((resolve,reject) => 
+{
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Reporte');
 
@@ -100,17 +92,13 @@ const generarRecepcion = (data) => {
 
     const filename = 'files/Reporte_documentos_recepcionados.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => {
-            console.log(`Reporte generado exitosamente en ${filename}`);
-        })
-        .catch(error => {
-            console.error('Error al generar el reporte:', error);
-        });
+        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .catch(error => reject('Error al generar el reporte:', error));
 
-}
+})
 
 // rechazados
-const generarRechazados = (data) => {
+const generarRechazados = (data) => new Promise ((resolve,reject) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Reporte');
 
@@ -130,13 +118,11 @@ const generarRechazados = (data) => {
 
     const filename = 'files/Reporte_documentos_rechazados_emision.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => {
-            console.log(`Reporte generado exitosamente en ${filename}`);
-        })
-        .catch(error => {
-            console.error('Error al generar el reporte:', error);
-        });
-}
+        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .catch(error => reject('Error al generar el reporte:', error));
+}) 
+    
+
 export { generarAutorizados, generarEventos, generarNomina, generarRecepcion, generarRechazados };
 
 

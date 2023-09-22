@@ -1,12 +1,12 @@
 
 
 
-const query = (gte, lt) => [{
+const query = (gte, lte) => [{
     $match: {
         estado: 2,
         created_at: {
             $gte: gte,
-            $lt: lt
+            $lte: lte
         }
     }
 },
@@ -44,7 +44,7 @@ const query = (gte, lt) => [{
     }
 }]
 
-const eventos = (gte, lt) =>  [{
+const eventos = (gte, lte) =>  [{
     $match: {
         "radian.evento_pre_radian": true
     }
@@ -68,7 +68,7 @@ const eventos = (gte, lt) =>  [{
                                 $gte: ["$created_at", gte]
                             },
                             {
-                                $lt: ["$created_at", lt]
+                                $lte: ["$created_at", lte]
                             }
                         ]
                     }
@@ -92,13 +92,13 @@ const eventos = (gte, lt) =>  [{
 { $sort: { totalDocumentos_eventos: -1 } },
 ]
 
-const nomina = (gte, lt) =>  [
+const nomina = (gte, lte) =>  [
     {
         $match: {
             estado: 2,
             created_at: {
                 $gte: gte,
-                $lt: lt
+                $lte: lte
             }
         }
     },
@@ -135,12 +135,12 @@ const nomina = (gte, lt) =>  [
     }
 ]
 
-const recepcion = (gte, lt) =>  [
+const recepcion = (gte, lte) =>  [
     {
         $match: {
             created_at: {
                 $gte: gte,
-                $lt: lt
+                $lte: lte
             }
         }
     },
@@ -178,13 +178,13 @@ const recepcion = (gte, lt) =>  [
     }
 ]
 
-const rechazados = (gte, lt) => [
+const rechazados = (gte, lte) => [
     {
         $match: {
             estado: 3,
             created_at: {
                 $gte: gte,
-                $lt: lt
+                $lte: lte
             }
         }
     },
