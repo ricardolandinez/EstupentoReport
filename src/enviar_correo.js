@@ -7,7 +7,7 @@ const sendEmail = (attachments) => {
             service: 'Gmail',
             auth: {
                 user: 'ricardo.landinez@estupendo.com.co',
-                pass: 'Lotto0804'
+                pass: 'Terry040804'
             }
         });
         
