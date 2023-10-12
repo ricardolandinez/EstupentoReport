@@ -22,8 +22,8 @@ const generateReportes = async () => {
 }
 
 const generarDocumentos = () => new Promise(async (resolve, reject) => {
-    const gte = new Date("2023-09-01T00:00:00-05:00")
-    const lte = new Date("2023-09-01T23:59:59-05:00")
+    const gte = new Date("2023-10-01T00:00:00-05:00")
+    const lte = new Date("2023-10-31T23:59:59-05:00")
 
     const queryRechazados = rechazados(gte, lte)
     const queryEventos = eventos(gte, lte)
