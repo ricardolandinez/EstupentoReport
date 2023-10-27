@@ -17,7 +17,7 @@ const sendEmail = (attachments) => {
             //cc: 'correo.en.copia@example.com', 
             //bcc: 'correo.en.copia.oculta@example.com',
             subject: 'Reporte documentos electronicos Estupendo-SEPTIEMBRE',
-            text: 'Buen día estimado equipo de Estupendo,\n\nReciban un cordial saludo.\n\nEsto es un mensae automático y tiene el fin , este correo se generará al finalizar cada mes. Precisamente, en el primer día de cada mes, se enviará un reporte correspondiente al mes anterior. Esto significa que, si hoy es 1 de septiembre, este mensaje incluirá un reporte detallado de todo el mes de agosto.\n\nEn este correo, encontrarán cinco informes, cuyo nombre identificará claramente su contenido y referencia.\n\nAprovechamos para resaltar que si tienen algún comentario o sugerencia relacionada con este mensaje automático y preestablecido, les agradeceríamos hacérnoslo saber.\n\nSaludos cordiales',
+            text: 'Estimado equipo de Estupendo,\n\nEspero que este mensaje les encuentre bien.\n\nLes escribo para informarles que, a partir de ahora, recibirán un informe mensual detallando el uso de los servicios totales de Estupendo. Este correo se generará automáticamente el primer día de cada mes y cubrirá el período del mes anterior. Por ejemplo, si hoy es el 1 de enero, el informe adjunto corresponderá a todo el mes de diciembre.\n\nAdjunto a este correo, encontrarán cinco informes. Cada uno está claramente etiquetado para identificar su contenido y referencia.\n\nSi tienen algún comentario o sugerencia sobre este nuevo formato de informe, por favor, no duden en compartirlo con nosotros.\n\nSaludos cordiales,',
             attachments,
         };
         
