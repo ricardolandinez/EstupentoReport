@@ -17,7 +17,7 @@ const generarAutorizados = (data) => new Promise((resolve, reject) => {
 
     const filename = 'files/Reporte_documentos_autorizados_emision.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .then(() => resolve(`Reporte autorizados generado exitosamente en ${filename}`))
         .catch(error => reject('Error al generar el reporte:', error));
 })
 
@@ -41,7 +41,7 @@ const generarEventos = (data) => new Promise((resolve, reject) => {
 
     const filename = 'files/Reporte_eventos.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .then(() => resolve(`Reporte eventos generado exitosamente en ${filename}`))
         .catch(error => reject('Error al generar el reporte:', error));
 })
 
@@ -64,7 +64,7 @@ const generarNomina = (data) => new Promise((resolve, reject) => {
 
     const filename = 'files/Reporte_documentos_autorizados_nomina.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .then(() => resolve(`Reporte nómina generado exitosamente en ${filename}`))
         .catch(error => reject('Error al generar el reporte:', error));
 })
 
@@ -92,7 +92,7 @@ const generarRecepcion = (data) => new Promise ((resolve,reject) =>
 
     const filename = 'files/Reporte_documentos_recepcionados.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .then(() => resolve(`Reporte recepción generado exitosamente en ${filename}`))
         .catch(error => reject('Error al generar el reporte:', error));
 
 })
@@ -118,7 +118,7 @@ const generarRechazados = (data) => new Promise ((resolve,reject) => {
 
     const filename = 'files/Reporte_documentos_rechazados_emision.xlsx';
     workbook.xlsx.writeFile(filename)
-        .then(() => resolve(`Reporte generado exitosamente en ${filename}`))
+        .then(() => resolve(`Reporte rechazados generado exitosamente en ${filename}`))
         .catch(error => reject('Error al generar el reporte:', error));
 }) 
     

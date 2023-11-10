@@ -3,6 +3,8 @@ import { generarAutorizados, generarEventos, generarNomina, generarRecepcion, ge
 import { query, eventos, nomina, recepcion, rechazados } from "./queries.js"
 import { sendEmail } from "./enviar_correo.js"
 import fs from "fs"
+import logger from "./logger.js"
+import moment from "moment"
 
 const generateReportes = async () => {
 
@@ -22,8 +24,12 @@ const generateReportes = async () => {
 }
 
 const generarDocumentos = () => new Promise(async (resolve, reject) => {
-    const gte = new Date("2023-10-01T00:00:00-05:00")
-    const lte = new Date("2023-10-31T23:59:59-05:00")
+    logger.info("Generando reportes...")
+    
+    const now = moment()
+    console.log(now)
+    const lte = now.toDate()
+    const gte = now.add(-1, "day").toDate()
 
     const queryRechazados = rechazados(gte, lte)
     const queryEventos = eventos(gte, lte)
@@ -39,11 +45,17 @@ const generarDocumentos = () => new Promise(async (resolve, reject) => {
         data.nomina = await generarReporte(queryNomina, "documentos_nomina")
         data.eventos = await generarReporte(queryEventos, "clientes")
 
-        await generarAutorizados(data.autorizados)
-        await generarRecepcion(data.recepcion)
-        await generarRechazados(data.rechazados)
-        await generarNomina(data.nomina)
-        await generarEventos(data.eventos)
+        let msg
+        msg = await generarAutorizados(data.autorizados)
+        logger.info(msg) 
+        msg = await generarRecepcion(data.recepcion)
+        logger.info(msg) 
+        msg = await generarRechazados(data.rechazados)
+        logger.info(msg) 
+        msg = await generarNomina(data.nomina)
+        logger.info(msg) 
+        msg = await generarEventos(data.eventos)
+        logger.info(msg) 
 
 
         const attachments = fs.readdirSync("files")

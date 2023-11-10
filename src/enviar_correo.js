@@ -6,8 +6,8 @@ const sendEmail = (attachments) => {
         const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: 'ricardo.landinez@estupendo.com.co',
-                pass: 'Terry040804'
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASSWORD
             }
         });
         
