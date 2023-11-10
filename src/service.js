@@ -10,9 +10,9 @@ const generateReportes = async () => {
 
     if (!fs.existsSync("files")) fs.mkdirSync("files")
 
-    const files = await generarDocumentos()
+    const {attachments: files, since} = await generarDocumentos()
 
-    sendEmail(files).then(() => {
+    sendEmail(files, since).then(() => {
         console.log("Correo enviado!")
         fs.rmSync("files", {
             recursive: true,
@@ -27,9 +27,10 @@ const generarDocumentos = () => new Promise(async (resolve, reject) => {
     logger.info("Generando reportes...")
     
     const now = moment()
-    console.log(now)
+    now.locale("es")
     const lte = now.toDate()
-    const gte = now.add(-1, "day").toDate()
+    const gte = now.add(-1, "month").toDate()
+
 
     const queryRechazados = rechazados(gte, lte)
     const queryEventos = eventos(gte, lte)
@@ -68,7 +69,7 @@ const generarDocumentos = () => new Promise(async (resolve, reject) => {
                     path,
                 }
             })
-        resolve(attachments)
+        resolve({attachments,since: now})
     } catch (error) {
         reject(error)
     }

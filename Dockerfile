@@ -18,7 +18,7 @@ COPY package.json .
 
 RUN npm i
 
-RUN echo "52 19 * * * /usr/local/bin/node /app/main.js" > /var/spool/cron/crontabs/root
+RUN echo "0 0 1 * * /usr/local/bin/node /app/main.js" > /var/spool/cron/crontabs/root
 
 RUN mkdir ./logs
 
