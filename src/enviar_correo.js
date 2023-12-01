@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
-
-
+import destinatarios from "./destinatarios.json" assert {type: "json"}
 const sendEmail = (attachments, since) => {
     return new Promise((resolve, reject) => {
         const transporter = nodemailer.createTransport({
@@ -13,7 +12,7 @@ const sendEmail = (attachments, since) => {
         
         const mailOptions = {
             from: 'ricardo.landinez@estupendo.com.co',
-            to: 'rlandinez84@gmail.com',// Cambia el correo de destino
+            to: destinatarios.join(","),// Cambia el correo de destino
             //cc: 'correo.en.copia@example.com', 
             //bcc: 'correo.en.copia.oculta@example.com',
             subject: `Reporte documentos electronicos Estupendo-${since.format("MMMM")}`,

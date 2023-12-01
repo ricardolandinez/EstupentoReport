@@ -8,6 +8,7 @@ services:
         SMTP_PASSWORD: ${SMTP_PASSWORD}
       dockerfile: Dockerfile
     image: ricardolandinez/reporting_estupendo
+    restart: always
     container_name: reporting_estupendo
     volumes:
       - ./logs:/app/logs
