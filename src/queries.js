@@ -1,4 +1,10 @@
-
+/**
+ * Realiza una consulta a la base de datos para obtener información sobre documentos rechazados
+ * por emisores dentro de un rango de fechas.
+ * @param {Date} gte - Fecha mínima (mayor o igual que).
+ * @param {Date} lte - Fecha máxima (menor o igual que).
+ * @returns {Array} - Un arreglo de etapas de agregación de MongoDB que representa la consulta.
+ */
 
 
 const query = (gte, lte) => [{
@@ -44,7 +50,8 @@ const query = (gte, lte) => [{
     }
 }]
 
-const eventos = (gte, lte) =>  [{
+//Busqueda documentos emision autorizados
+const eventos = (gte, lte) => [{
     $match: {
         "radian.evento_pre_radian": true
     }
@@ -92,7 +99,8 @@ const eventos = (gte, lte) =>  [{
 { $sort: { totalDocumentos_eventos: -1 } },
 ]
 
-const nomina = (gte, lte) =>  [
+////Busqueda documentos Nomina autorizados
+const nomina = (gte, lte) => [
     {
         $match: {
             estado: 2,
@@ -110,7 +118,7 @@ const nomina = (gte, lte) =>  [
     {
         $group: {
             _id: "$emisorObjectId",
-           totalDocumentos_rechazado: { $sum: 1 }
+            totalDocumentos_rechazado: { $sum: 1 }
         }
     },
     {
@@ -126,7 +134,7 @@ const nomina = (gte, lte) =>  [
             as: "clienteInfo"
         }
     },
-{
+    {
         $project: {
             razon_social: { $arrayElemAt: ["$clienteInfo.nombre_identificacion", 0] },
             nit: { $arrayElemAt: ["$clienteInfo.identificacion", 0] },
@@ -134,8 +142,8 @@ const nomina = (gte, lte) =>  [
         }
     }
 ]
-
-const recepcion = (gte, lte) =>  [
+////Busqueda documentos Recepcion autorizados
+const recepcion = (gte, lte) => [
     {
         $match: {
             created_at: {
@@ -152,7 +160,7 @@ const recepcion = (gte, lte) =>  [
     {
         $group: {
             _id: "$emisorObjectId",
-           totalDocumentos_rechazado: { $sum: 1 }
+            totalDocumentos_rechazado: { $sum: 1 }
         }
     },
     {
@@ -169,7 +177,7 @@ const recepcion = (gte, lte) =>  [
         }
     },
 
-        {
+    {
         $project: {
             razon_social: { $arrayElemAt: ["$clienteInfo.nombre_identificacion", 0] },
             nit: { $arrayElemAt: ["$clienteInfo.identificacion", 0] },
@@ -177,7 +185,7 @@ const recepcion = (gte, lte) =>  [
         }
     }
 ]
-
+////Busqueda documentos emision Rechazados
 const rechazados = (gte, lte) => [
     {
         $match: {
@@ -196,7 +204,7 @@ const rechazados = (gte, lte) => [
     {
         $group: {
             _id: "$emisorObjectId",
-           totalDocumentos_rechazado: { $sum: 1 }
+            totalDocumentos_rechazado: { $sum: 1 }
         }
     },
     {
@@ -222,4 +230,4 @@ const rechazados = (gte, lte) => [
     }
 ]
 
-export {eventos,nomina,query,recepcion,rechazados} 
+export { eventos, nomina, query, recepcion, rechazados } 

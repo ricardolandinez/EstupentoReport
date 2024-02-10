@@ -1,41 +1,31 @@
-2023-10-28T06:01:17.523Z [info]: Generando reportes...
-2023-10-28T06:01:41.894Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-10-28T06:01:41.911Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-10-28T06:01:41.928Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-10-28T06:01:41.936Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-10-28T06:01:41.949Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
-2023-11-10T00:38:52.805Z [info]: Generando reportes...
-2023-11-10T00:39:05.329Z [info]: Generando reportes...
-2023-11-10T00:43:53.062Z [info]: Generando reportes...
-2023-11-10T00:44:59.991Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-11-10T00:45:00.027Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-11-10T00:45:00.049Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-11-10T00:45:00.060Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-11-10T00:45:00.088Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
-2023-11-10T00:46:30.440Z [info]: Generando reportes...
-2023-11-10T01:15:33.952Z [info]: Generando reportes...
-2023-11-10T01:18:16.329Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-11-10T01:18:16.362Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-11-10T01:18:16.384Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-11-10T01:18:16.398Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-11-10T01:18:16.422Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
-2023-11-10T01:21:53.924Z [info]: Generando reportes...
-2023-11-10T01:24:28.033Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-11-10T01:24:28.059Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-11-10T01:24:28.087Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-11-10T01:24:28.104Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-11-10T01:24:28.123Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
-2023-12-01T04:01:19.093Z [info]: Generando reportes...
-2023-12-01T04:04:34.526Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-12-01T04:04:34.546Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-12-01T04:04:34.561Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-12-01T04:04:34.577Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-12-01T04:04:34.590Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
-2023-12-01T04:19:32.486Z [info]: Generando reportes...
-2023-12-01T04:20:03.917Z [info]: Generando reportes...
-2023-12-01T04:20:38.915Z [info]: Generando reportes...
-2023-12-01T04:22:26.803Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
-2023-12-01T04:22:26.857Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
-2023-12-01T04:22:26.880Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
-2023-12-01T04:22:26.891Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
-2023-12-01T04:22:26.907Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
+2024-02-01T13:34:51.167Z [info]: Generando reportes...
+2024-02-01T13:35:54.762Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
+2024-02-01T13:35:54.802Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
+2024-02-01T13:35:54.840Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
+2024-02-01T13:35:54.853Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
+2024-02-01T13:35:54.883Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
+2024-02-01T13:45:17.622Z [info]: Generando reportes...
+2024-02-01T13:46:38.120Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
+2024-02-01T13:46:38.146Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
+2024-02-01T13:46:38.181Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
+2024-02-01T13:46:38.199Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
+2024-02-01T13:46:38.239Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
+2024-02-01T13:47:26.093Z [info]: Generando reportes...
+2024-02-01T13:48:30.489Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
+2024-02-01T13:48:30.515Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
+2024-02-01T13:48:30.535Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
+2024-02-01T13:48:30.548Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
+2024-02-01T13:48:30.602Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
+2024-02-01T13:49:36.180Z [info]: Generando reportes...
+2024-02-01T13:52:49.263Z [info]: Generando reportes...
+2024-02-01T13:55:57.577Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
+2024-02-01T13:55:57.618Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
+2024-02-01T13:55:57.633Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
+2024-02-01T13:55:57.658Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
+2024-02-01T13:55:57.696Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
+2024-02-01T13:58:13.014Z [info]: Generando reportes...
+2024-02-01T14:00:43.537Z [info]: Reporte autorizados generado exitosamente en files/Reporte_documentos_autorizados_emision.xlsx
+2024-02-01T14:00:43.620Z [info]: Reporte recepción generado exitosamente en files/Reporte_documentos_recepcionados.xlsx
+2024-02-01T14:00:43.650Z [info]: Reporte rechazados generado exitosamente en files/Reporte_documentos_rechazados_emision.xlsx
+2024-02-01T14:00:43.672Z [info]: Reporte nómina generado exitosamente en files/Reporte_documentos_autorizados_nomina.xlsx
+2024-02-01T14:00:43.724Z [info]: Reporte eventos generado exitosamente en files/Reporte_eventos.xlsx
